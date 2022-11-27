@@ -11,6 +11,7 @@ import {ProductFormComponent} from './components/product-form/product-form.compo
 import {EmployeeFormComponent} from './components/employee-form/employee-form.component';
 import {LoginFormComponent} from './components/login-form/login-form.component';
 import {ExtendProductFormComponent} from './components/extend-product-form/extend-product-form.component';
+import {RegisterFormComponent} from './components/register-form/register-form.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {SelectCategoriesComponentModule} from './components/select-categories/select-categories.component-module';
@@ -30,6 +31,8 @@ import {EmployeesServiceModule} from './services/employees.service-module';
 import {LoginFormComponentModule} from './components/login-form/login-form.component-module';
 import {LoginServiceModule} from './services/login.service-module';
 import {ExtendProductFormComponentModule} from './components/extend-product-form/extend-product-form.component-module';
+import {RegisterFormComponentModule} from './components/register-form/register-form.component-module';
+import {RegisterServiceModule} from './services/register.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([{path: 'products', component: ProductListComponent}, {
@@ -47,10 +50,10 @@ import {ExtendProductFormComponentModule} from './components/extend-product-form
   }, {path: 'create-employee', component: EmployeeFormComponent}, {
     path: 'login',
     component: LoginFormComponent
-  }, {
-    path: 'extend-create-product',
-    component: ExtendProductFormComponent
-  }]), ProductListComponentModule, ProductsServiceModule, SelectCategoriesComponentModule, CategoriesServiceModule, CryptoChipsListComponentModule, CryptoChipsServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginServiceModule, ExtendProductFormComponentModule],
+  }, {path: 'extend-create-product', component: ExtendProductFormComponent}, {
+    path: 'register',
+    component: RegisterFormComponent
+  }]), ProductListComponentModule, ProductsServiceModule, SelectCategoriesComponentModule, CategoriesServiceModule, CryptoChipsListComponentModule, CryptoChipsServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginServiceModule, ExtendProductFormComponentModule, RegisterFormComponentModule, RegisterServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
