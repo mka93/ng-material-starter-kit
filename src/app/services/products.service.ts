@@ -15,4 +15,8 @@ export class ProductsService {
   create(product: Omit<ProductModel, 'id'>): Observable<ProductModel> {
     return this._httpClient.post<ProductModel>('https://fakestoreapi.com/products', product);
   }
+
+  getCategories(): Observable<ProductModel[]> {
+    return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products/categories');
+  }
 }
