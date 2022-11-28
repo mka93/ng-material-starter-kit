@@ -15,6 +15,7 @@ import {RegisterFormComponent} from './components/register-form/register-form.co
 import {ProductDetailsComponent} from './components/product-details/product-details.component';
 import {CatFactComponent} from './components/cat-fact/cat-fact.component';
 import {AgifyComponent} from './components/agify/agify.component';
+import {CartComponent} from './components/cart/cart.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {SelectCategoriesComponentModule} from './components/select-categories/select-categories.component-module';
@@ -41,6 +42,8 @@ import {CatFactComponentModule} from './components/cat-fact/cat-fact.component-m
 import {CatFactServiceModule} from './services/cat-fact.service-module';
 import {AgifyComponentModule} from './components/agify/agify.component-module';
 import {AgifyServiceModule} from './services/agify.service-module';
+import {CartComponentModule} from './components/cart/cart.component-module';
+import {CartServiceModule} from './services/cart.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([{path: 'products', component: ProductListComponent}, {
@@ -64,10 +67,10 @@ import {AgifyServiceModule} from './services/agify.service-module';
   }, {path: 'product/:id', component: ProductDetailsComponent}, {
     path: 'cat-fact',
     component: CatFactComponent
-  }, {
-    path: 'age/:name',
-    component: AgifyComponent
-  }]), ProductListComponentModule, ProductsServiceModule, SelectCategoriesComponentModule, CategoriesServiceModule, CryptoChipsListComponentModule, CryptoChipsServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginServiceModule, ExtendProductFormComponentModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, CatFactComponentModule, CatFactServiceModule, AgifyComponentModule, AgifyServiceModule],
+  }, {path: 'age/:name', component: AgifyComponent}, {
+    path: 'cart/:id',
+    component: CartComponent
+  }]), ProductListComponentModule, ProductsServiceModule, SelectCategoriesComponentModule, CategoriesServiceModule, CryptoChipsListComponentModule, CryptoChipsServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginServiceModule, ExtendProductFormComponentModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, CatFactComponentModule, CatFactServiceModule, AgifyComponentModule, AgifyServiceModule, CartComponentModule, CartServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
