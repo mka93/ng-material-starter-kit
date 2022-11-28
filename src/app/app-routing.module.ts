@@ -16,6 +16,7 @@ import {ProductDetailsComponent} from './components/product-details/product-deta
 import {CatFactComponent} from './components/cat-fact/cat-fact.component';
 import {AgifyComponent} from './components/agify/agify.component';
 import {CartComponent} from './components/cart/cart.component';
+import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {SelectCategoriesComponentModule} from './components/select-categories/select-categories.component-module';
@@ -44,6 +45,8 @@ import {AgifyComponentModule} from './components/agify/agify.component-module';
 import {AgifyServiceModule} from './services/agify.service-module';
 import {CartComponentModule} from './components/cart/cart.component-module';
 import {CartServiceModule} from './services/cart.service-module';
+import {UserDetailsComponentModule} from './components/user-details/user-details.component-module';
+import {UserServiceModule} from './services/user.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([{path: 'products', component: ProductListComponent}, {
@@ -67,10 +70,10 @@ import {CartServiceModule} from './services/cart.service-module';
   }, {path: 'product/:id', component: ProductDetailsComponent}, {
     path: 'cat-fact',
     component: CatFactComponent
-  }, {path: 'age/:name', component: AgifyComponent}, {
-    path: 'cart/:id',
-    component: CartComponent
-  }]), ProductListComponentModule, ProductsServiceModule, SelectCategoriesComponentModule, CategoriesServiceModule, CryptoChipsListComponentModule, CryptoChipsServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginServiceModule, ExtendProductFormComponentModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, CatFactComponentModule, CatFactServiceModule, AgifyComponentModule, AgifyServiceModule, CartComponentModule, CartServiceModule],
+  }, {path: 'age/:name', component: AgifyComponent}, {path: 'cart/:id', component: CartComponent}, {
+    path: 'user/:id',
+    component: UserDetailsComponent
+  }]), ProductListComponentModule, ProductsServiceModule, SelectCategoriesComponentModule, CategoriesServiceModule, CryptoChipsListComponentModule, CryptoChipsServiceModule, PublicHolidaysListComponentModule, PublicHolidaysServiceModule, CheckboxCategoriesComponentModule, CategoriesMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginServiceModule, ExtendProductFormComponentModule, RegisterFormComponentModule, RegisterServiceModule, ProductDetailsComponentModule, CatFactComponentModule, CatFactServiceModule, AgifyComponentModule, AgifyServiceModule, CartComponentModule, CartServiceModule, UserDetailsComponentModule, UserServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
