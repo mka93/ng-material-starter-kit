@@ -100,6 +100,10 @@
     "text-description": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$title$</h1>\n<p>$description$</p>"
+    },
+    "bored-template": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<h1>Do Something!</h1>\n<p>$activity$</p>\n<p>Participants: $participants$</p>"
     }
   }
 }

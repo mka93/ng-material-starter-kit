@@ -1,0 +1,8 @@
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="bored$ | async as item"><h1>Do Something!</h1>
+      <p>{{item.activity}}</p>
+      <p><b>Participants:</b> {{item.participants}}</p></ng-container>
+  </mat-card-content>
+</mat-card>
